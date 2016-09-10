@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> Conditions </title>
+</head>
+<body>
+<p> Vote if you are 18 years</p>
+<button onclick="Election(18)">Click if you are 18</button>
+<button onclick="Election(1)">Click if you are below 18</button>
+<p id="Disp"></p>
+<script>
+function Election(Age){
+if(Age >= "18"){
+document.getElementById("Disp").innerHTML="You can Vote";
+}
+else{
+document.getElementById("Disp").innerHTML="You can't Vote";
+}
+}
+</script>
+</body>
+</html>

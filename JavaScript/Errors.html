@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Errors</title>
+</head>
+<body>
+<p>Welcome to India vs Pakistan cricket match maximum crowd limit is 10</p> 
+<button onclick="counting()">Buy ticket</button>
+<button onclick="myFunction()">submit</button>
+<p id="Disp">
+<script>
+var count=0;
+function counting(){
+	count++;
+}
+function myFunction(){
+try{
+	if(count>10)throw "stadium is full";
+	else document.getElementById("Disp").innerHTML = "Welcome to the match your seat number is: "+count;
+}
+catch(err){
+	document.getElementById("Disp").innerHTML = err;
+}
+}
+</script>
+</body>
+</html>

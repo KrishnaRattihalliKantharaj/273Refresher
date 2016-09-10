@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+<form>
+Enter first number
+<br><input type="text" id="txt1" name="text1"><br/>            
+Enter second number
+<br><input type="text" id="txt2" name="text2"><br/>
+Enter operation
+<br><input type="text" id="operator">
+</form>
+<button onclick="myFunction()">Result</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+var y = document.getElementById("txt1").value;
+var z = document.getElementById("txt2").value;
+var c = document.getElementById("operator").value;
+var x;
+switch(c)
+{
+case '+':
+x= +y + +z;
+document.getElementById("demo").innerHTML = x;
+break;
+case '-':
+x=y-z;
+document.getElementById("demo").innerHTML = x;
+break;
+case '*':
+x=y*z;
+document.getElementById("demo").innerHTML = x;
+break;
+case '/':
+x=y/z;
+document.getElementById("demo").innerHTML = x;
+break;
+default:
+document.getElementById("demo").innerHTML="no such operation";
+break;
+} 
+}
+</script>
+</body>
+</html>

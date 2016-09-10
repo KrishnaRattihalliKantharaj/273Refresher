@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Arrays</title>
+</head>
+<body>
+<p> Grocery list </p>
+<p id="Disp"></p>
+<p> After shopping pepper the list is:</p>
+<p id="Disp1"></p>
+<script>
+var Grocery = [];
+Grocery.push("Banana");
+Grocery.push("Rice");
+Grocery.push("Tomato");
+Grocery.push("Pepper");
+document.getElementById("Disp").innerHTML = Grocery;
+Grocery.pop();
+document.getElementById("Disp1").innerHTML = Grocery;
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Variable Demo</title>
+</head>
+<body>
+<script>
+function MainClass(){
+	this.MainProperty = "Main";
+	this.MainMethod = function MainMethod()
+	{
+		document.write(" Returned by MainMethod");
+	}
+}
+
+function subMethod(){
+	this.subProperty = "sub";
+	this.subMethod = function subMethod()
+	{
+		document.write(" Returned by subMethod");
+	}
+}
+
+subMethod.prototype = new MainClass();
+var instance = new subMethod();
+instance.MainMethod();
+
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Virat Kohli is the best cricketer in the world</p>
+<p>Click the below button to replace cricketer with footballer</p>
+<button onclick="Search()">Click Here</button>
+<p id="Disp"></p>
+<p id="Disp1"></p>
+<script>
+function Search() {
+    var str = "Virat Kohli is the best cricketer in the world";
+    var str1 = str.search("cricketer");
+    var str2 = str.replace("cricketer","footballer");
+    document.getElementById("Disp").innerHTML = "the index of the word:"+str1;
+    document.getElementById("Disp1").innerHTML = "the statement after replace:   "+str2;
+}
+</script>
+
+</body>
+</html>
+
+

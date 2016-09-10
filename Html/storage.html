@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Web Storage</title>
+</head>
+<body>
+<p>Local Storage</p>
+<button onclick="Local()">Local Storage</button>
+<p id="Disp1"></p>
+<hr>
+<p>Session Storage</p>
+<button onclick="Session()">Session Storage</button>
+<p id="Disp2"></p>
+<script>
+function Local() {
+if(typeof(Storage) !== "undefined") {
+if (localStorage.clickcount) {
+localStorage.clickcount = Number(localStorage.clickcount)+1;
+} else {
+localStorage.clickcount = 1;
+}
+document.getElementById("Disp1").innerHTML = "click count " + localStorage.clickcount;
+} else {
+document.getElementById("Disp1").innerHTML = "Sorry, your browser does not support web storage...";
+}
+}
+function Session() {
+if(typeof(Storage) !== "undefined") {
+if (sessionStorage.clickcount) {
+sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+} else {
+sessionStorage.clickcount = 1;
+}
+document.getElementById("Disp2").innerHTML = "click count " + sessionStorage.clickcount;
+} else {
+document.getElementById("Disp2").innerHTML = "Sorry, your browser does not support web storage...";
+}
+}
+</script>
+</body>
+</html>
